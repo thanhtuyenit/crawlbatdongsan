@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Sep  6 11:17:11 2018
-@author: kerry
-"""
 
 # import libraries
 import urllib.request
@@ -36,7 +32,6 @@ for result in results:
     date = result.find('div', attrs ={'class':'floatright mar-right-10'}).getText()
     print(date)
     location = result.find('span', attrs ={'class':'product-city-dist'}).getText()
-    print(s)
     s = result.find('span', attrs ={'class':'product-area'}).getText()
     print(s)
     rows.append([title,s,price,location,date,content])
